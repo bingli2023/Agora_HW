@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Agora Certificate Day-2</title>
+    <!-- Import Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+        <div class = "center">
+
+            <div id = "calculator">
+                <span id="headingText"> <strong>Four-Function Calculator</strong> </span>
+                <br/>
+                <input type="text" id="operand1" placeholder="Operand 1" />
+                <input type="text" id="operand2" placeholder = "Operand 2" />
+                <br />
+                <button class="operation" onclick="add()"">Add</button>
+                <button class="operation" onclick="subtract()" > Subtract</button>
+                <br/>
+                <button class="operation" onclick="multiply()"">Multiply</button>
+                <button class="operation" onclick="divide()">Divide</button>
+                <br/>
+                <input type="text" id="result" placeholder= "Result = " />
+            </div>
+        </div>
+        <script>
+            function add() {
+                let firstNum = Number(document.getElementById("operand1").value); 
+                let secNum = Number(document.getElementById("operand2").value); 
+                sum = firstNum + secNum
+                document.getElementById("result").value = sum; 
+            }
+    
+            function subtract() {
+                let firstNum = Number(document.getElementById("operand1").value); 
+                let secNum = Number(document.getElementById("operand2").value); 
+                difference = firstNum - secNum
+                document.getElementById("result").value = difference; 
+            }
+    
+            function multiply() {
+                let firstNum = Number(document.getElementById("operand1").value); 
+                let secNum = Number(document.getElementById("operand2").value); 
+                product = firstNum * secNum
+                document.getElementById("result").value = product; 
+            }
+    
+            function divide() {
+                let firstNum = Number(document.getElementById("operand1").value); 
+                let secNum = Number(document.getElementById("operand2").value); 
+                quotient = firstNum / secNum
+                document.getElementById("result").value = quotient; 
+            }
+    
+        </script>
+  </body>
+</html>
